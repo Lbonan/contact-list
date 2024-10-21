@@ -18,6 +18,8 @@ export const Email = styled.textarea`
   resize: none;
   border: none;
   background-color: transparent;
+  margin-left: 8px;
+  margin-right: 8px;
 `
 export const Telefone = styled.textarea`
   resize: none;

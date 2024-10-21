@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import ContactCards from '../../components/ContactCard'
 import { AiOutlineUser } from 'react-icons/ai'
-import { ButtonSave, Input, MainContainer } from '../../styles'
+import { ButtonLink, Input, MainContainer } from '../../styles'
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
 
@@ -24,7 +24,7 @@ const ContactList = () => {
           placeholder="Search"
           onChange={(ev) => dispatch(alteraTermo(ev.target.value))}
         />
-        <ButtonSave>+ novo contato</ButtonSave>
+        <ButtonLink to="/novo">+ novo contato</ButtonLink>
       </div>
       <div>
         <h2>

@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import { Button, ButtonRemove, ButtonSave } from '../../styles'
 import * as S from './styles'
+import ContatosClass from '../../models/ContatosClass'
+import { useDispatch } from 'react-redux'
+import { remover } from '../../store/reducers/contatos'
 
-const ContactCards = () => {
+type Props = ContatosClass
+
+const ContactCards = ({ titulo, email, telefone, id }: Props) => {
+  const dispatch = useDispatch()
   const [isEditing, setIsEditing] = useState(false)
   return (
     <S.Card>
-      <S.Titulo>Lucas Bonan</S.Titulo>
-      <S.Email>lucas@gmail.com</S.Email>
-      <S.Telefone>(22) 22222-2222</S.Telefone>
+      <S.Titulo disabled={!isEditing} value={titulo}></S.Titulo>
+      <S.Email disabled={!isEditing} value={email}></S.Email>
+      <S.Telefone disabled={!isEditing} value={telefone}></S.Telefone>
       <S.ActionBar>
         {isEditing ? (
           <>
@@ -20,7 +26,9 @@ const ContactCards = () => {
         ) : (
           <>
             <Button onClick={() => setIsEditing(true)}>Editar</Button>
-            <ButtonRemove>Remover</ButtonRemove>
+            <ButtonRemove onClick={() => dispatch(remover(id))}>
+              Remover
+            </ButtonRemove>
           </>
         )}
       </S.ActionBar>

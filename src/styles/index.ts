@@ -117,6 +117,7 @@ export const Input = styled.input`
   margin-right: 12px;
   margin-bottom: 30px;
   background-color: #fcfcfc;
+  margin-top: 16px;
 `
 
 export default GlobalStyle

@@ -46,6 +46,7 @@ const ContactCards = ({
 
   return (
     <S.Card>
+      {isEditing && <em>Editando... </em>}
       <S.Titulo
         disabled={!isEditing}
         value={titulo}

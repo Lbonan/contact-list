@@ -1,9 +1,9 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { cadastrar } from '../../store/reducers/contatos'
 import { ButtonSave, MainContainer } from '../../styles'
 import { BackButton, Form, Titulo, Campo } from './styles'
-import { useNavigate } from 'react-router-dom'
 
 const Formulario = () => {
   const navigate = useNavigate()
@@ -34,6 +34,7 @@ const Formulario = () => {
           type="text"
           placeholder="nome"
         />
+
         <Campo
           value={email}
           onChange={({ target }) => setEmail(target.value)}

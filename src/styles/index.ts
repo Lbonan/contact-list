@@ -9,9 +9,12 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   list-style: none;
- }
-`
 
+  body{
+    background-color: #00d8d6;
+  }
+}
+`
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -20,15 +23,19 @@ export const Container = styled.div`
 `
 
 export const MainContainer = styled.main`
-  height: 100vh;
+  height: 60vh;
+  padding: 10px 40px;
+  border-radius: 8px;
+  background-color: #fff;
 `
 
 export const Button = styled.button`
   font-size: 12px;
   font-weight: bold;
   padding: 8px 12px;
-  background-color: ${variaveis.preto};
+  background-color: ${variaveis.amarelo};
   color: #fff;
+  box-shadow: 0px 0px 8px #c1c1c1;
   border: none;
   cursor: pointer;
   border-radius: 8px;
@@ -40,9 +47,14 @@ export const Button = styled.button`
 
   &:hover {
     background-color: transparent;
-    border: 1px solid ${variaveis.preto};
-    color: ${variaveis.preto};
+    border: 1px solid ${variaveis.amarelo};
+    color: ${variaveis.amarelo};
     transform: scale(1);
+  }
+
+  @media (max-width: 764px) {
+    display: inline-block;
+    margin-left: 0px;
   }
 `
 
@@ -88,6 +100,14 @@ export const ButtonLink = styled(Link)`
     color: ${variaveis.verde};
     transform: scale(1);
   }
+
+  @media (max-width: 374px) {
+    display: block;
+    padding: 4px 8px;
+    margin-left: 0;
+    width: 60%;
+    margin-bottom: 16px;
+  }
 `
 
 export const Input = styled.input`
@@ -96,6 +116,7 @@ export const Input = styled.input`
   padding: 4px;
   margin-right: 12px;
   margin-bottom: 30px;
+  background-color: #fcfcfc;
 `
 
 export default GlobalStyle

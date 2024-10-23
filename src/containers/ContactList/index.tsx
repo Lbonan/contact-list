@@ -26,12 +26,12 @@ const ContactList = () => {
         />
         <ButtonLink to="/novo">+ novo contato</ButtonLink>
       </div>
+      <h2>
+        <AiOutlineUser />
+        Contatos
+      </h2>
+
       <div>
-        <h2>
-          <AiOutlineUser />
-          Contatos
-        </h2>
-        <span>{termo}</span>
         <ul>
           {contatos.map((c) => (
             <li key={c.titulo}>

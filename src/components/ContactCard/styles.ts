@@ -8,6 +8,10 @@ export const Card = styled.div`
   margin-bottom: 16px;
   margin-top: 18px;
   border-radius: 8px;
+
+  @media (max-width: 764px) {
+    display: block;
+  }
 `
 export const Titulo = styled.textarea`
   resize: none;
@@ -20,6 +24,10 @@ export const Email = styled.textarea`
   background-color: transparent;
   margin-left: 8px;
   margin-right: 8px;
+
+  @media (max-width: 764px) {
+    margin-left: 0;
+  }
 `
 export const Telefone = styled.textarea`
   resize: none;
@@ -27,5 +35,12 @@ export const Telefone = styled.textarea`
   background-color: transparent;
 `
 export const ActionBar = styled.div`
+  background-color: #fcfcfc;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 764px) {
+    display: block;
+    width: 100%;
+    border: none;
+  }
 `

@@ -23,10 +23,15 @@ export const Container = styled.div`
 `
 
 export const MainContainer = styled.main`
-  height: 60vh;
+  height: 80vh;
+  overflow-y: scroll;
   padding: 10px 40px;
   border-radius: 8px;
   background-color: #fff;
+
+  @media (max-width: 764px) {
+    height: 100vh;
+  }
 `
 
 export const Button = styled.button`
@@ -53,7 +58,6 @@ export const Button = styled.button`
   }
 
   @media (max-width: 764px) {
-    display: inline-block;
     margin-left: 0px;
   }
 `

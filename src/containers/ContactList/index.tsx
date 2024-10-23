@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import ContactCards from '../../components/ContactCard'
 import { AiOutlineUser } from 'react-icons/ai'
+import { StickerContainer } from './styles'
 import { ButtonLink, Input, MainContainer } from '../../styles'
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
@@ -18,14 +19,14 @@ const ContactList = () => {
   const contatos = filtraTarefa()
   return (
     <MainContainer>
-      <div>
+      <StickerContainer>
         <Input
           type="text"
           placeholder="Search"
           onChange={(ev) => dispatch(alteraTermo(ev.target.value))}
         />
         <ButtonLink to="/novo">+ novo contato</ButtonLink>
-      </div>
+      </StickerContainer>
       <h2>
         <AiOutlineUser />
         Contatos

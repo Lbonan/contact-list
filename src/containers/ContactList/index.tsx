@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import ContactCards from '../../components/ContactCard'
 import { AiOutlineUser } from 'react-icons/ai'
-import { StickerContainer } from './styles'
+import { StickerContainer, Titulo } from './styles'
 import { ButtonLink, Input, MainContainer } from '../../styles'
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
@@ -27,10 +27,10 @@ const ContactList = () => {
         />
         <ButtonLink to="/novo">+ novo contato</ButtonLink>
       </StickerContainer>
-      <h2>
+      <Titulo>
         <AiOutlineUser />
-        Contatos
-      </h2>
+        Contatos - {termo}
+      </Titulo>
 
       <div>
         <ul>
